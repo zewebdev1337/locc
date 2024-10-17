@@ -2,7 +2,7 @@
 
 ## WARNING
 
-This is basically a stripped down version of [promptify](https://github.com/zewebdev1337/promptify) and as such, ia contains the same buggy behavior in merging configs and excluding directories (I'm looking at you `node_modules`), might fix later, hopefully.
+This is basically a stripped down version of [promptify](https://github.com/zewebdev1337/promptify) and as such, it contains the same buggy behavior in merging configs and excluding directories (I'm looking at you `node_modules`), might fix later, hopefully.
 
 ## Description
 locc (Lines of Code Counter) is a command-line tool designed to traverse subdirectories in the current working directory, identifying code files to calculate and present non-empty line counts.
