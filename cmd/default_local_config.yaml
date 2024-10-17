@@ -1,0 +1,59 @@
+# The 'languages' section defines the programming languages that locc supports.
+# Each language is identified by a unique key, and the value is an object that contains
+# the file extensions associated with the language and the comment syntax used in the language.
+# The 'stores' and 'documents' sections define common data store and document formats that locc supports.
+# 'stores' and 'documents' have the same format as 'languages'
+# languages:
+# The language being defined.
+  # go:
+    # The 'extensions' key contains a list of file extensions that are commonly used for the language.
+    # extensions:
+      # - .go
+      # The 'comment' key contains the comment syntax used in the language. 
+      # This is used to add the relative file path as a comment at the top of the file if it hasn't been added already.
+    # comment: 
+      # If the language supports single-line comments, it should be represented as a single string.
+      # - //
+  # html:
+    # extensions:
+      # - .html
+    # comment:
+      # If the language only supports multi-line comments, it should be represented as a list of two strings,
+      # where the first string is the opening comment syntax and the second string is the closing comment syntax.
+      # - <!--
+      # - -->
+
+# Files to exclude or include must be listed under their language or the generic key 'locc'
+# Behavior was only defained for the following: Folders can only be excluded, not included, attempting to include a folder is not guaranteed and can lead to undefined behavior;
+# Folders to exclude must be listed under the generic key 'locc' and end with a forward slash (/), i.e: "node_modules/"
+# The important parts here are the file name and the format in which it's defined.
+# excludes:
+  # The 'locc' key contains common global exclusions including folders defined as simple exclusion 
+  # locc:
+    # If a filename is defined as a list item (with the format '- filename.format'), the default behavior is to exclude the file every time.
+    # - README.md
+    # - vendor/
+  # javascript:
+    # If a filename is defined as a key (with the format 'filename.format:'), it must contain either an 'exclude' or 'include' wordlist key.
+    # index.js:
+      # This wordlist contains a list of items defining the phrases that trigger an exclude of the file.
+      # In this case, files named index.js containing "AUTOMATICALLY GENERATED" would be excluded with all other index.js files being included.
+      # - AUTOMATICALLY GENERATED
+
+# includes:
+  # The 'locc' key contains overrides for exclusions defined under the 'locc' key in the global configuration,
+  # Including folders defined as simple exclusion with the suffix '/' but it might lead to undefined behavior.
+  # locc:
+    # If a filename is defined as a key (with the format 'filename.format:'), it's a Simple/File name based Filter
+    # - README.md # This overrides the global exclude for 'README.md'
+    # NOTICE: This is markdown, which is defined under "documents"
+    # To trigger this include, add the "--docs" flag
+    # - package.json # This overrides the global exclude for 'package.json'
+    # NOTICE: This is json, which is defined under "stores"
+    # To trigger this include, add the "--data" flag
+  # shell:
+    # - deploy.sh  # This overrides the global exclude for 'deploy.sh'
+    # NOTICE: Shell is defined under "languages"
+    # To trigger this include, no extra flags are required.
+
+  # max_file_size: 65536  # 64KB

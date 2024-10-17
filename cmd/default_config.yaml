@@ -1,0 +1,1039 @@
+# The 'languages' section defines the programming languages that the system supports.
+# Each language is identified by a unique key, and the value is an object that contains
+# the file extensions associated with the language and the comment syntax used in the language.
+languages:
+  # The language being defined.
+  c:
+    # The 'extensions' key contains a list of file extensions that are commonly used for the language.
+    extensions:
+      - .c
+      - .h
+    # The 'comment' key contains the comment syntax used in the language. 
+    # This is used to add the relative file path as a comment at the top of the file if it hasn't been added already.
+    comment:
+      # If the language supports single-line comments, it should be represented as a single string.
+      # If the language only supports multi-line comments, it should be represented as a list of two strings,
+      # where the first string is the opening comment syntax and the second string is the closing comment syntax.
+      - //
+  cpp:
+    extensions:
+      - .cpp
+      - .hpp
+      - .cc
+      - .hh
+      - .cxx
+      - .hxx
+      - .c++
+      - .h++
+    comment:
+      - //
+  csharp:
+    extensions:
+      - .cs
+      - .csx
+      - .cshtml
+    comment:
+      - //
+  fsharp:
+    extensions:
+      - .fs
+      - .fsi
+      - .fsx
+    comment:
+      - //
+  go:
+    extensions:
+      - .go
+      - .gox
+    comment:
+      - //
+  rust:
+    extensions:
+      - .rs
+      - .rlib
+    comment:
+      - //
+  html:
+    extensions:
+      - .html
+      - .htm
+      - .mhtm
+      - .mhtml
+      - .xhtml
+    comment:
+      - <!--
+      - -->
+  css:
+    extensions:
+      - .css
+      - .scss
+      - .sass
+      - .less
+    comment:
+      - /*
+      - '*/'
+  javascript:
+    extensions:
+      - .js
+      - .cjs
+      - .mjs
+      - .es6
+      - .es
+    comment:
+      - //
+  react:
+    extensions:
+      - .jsx
+    comment:
+      - //
+  typescript:
+    extensions:
+      - .ts
+    comment:
+      - //
+  tsx:
+    extensions:
+      - .tsx
+    comment:
+      - //
+  python:
+    extensions:
+      - .py
+      - .pyw
+      - .pyi
+      - .pyc
+      - .pyd
+      - .pyo
+      - .pyz
+      - .pyw
+      - .ipynb
+    comment:
+      - '#'
+  lua:
+    extensions:
+      - .lua
+      - .wlua
+    comment:
+      - --
+  zig:
+    extensions:
+      - .zig
+      - .zir
+    comment:
+      - //
+  ruby:
+    extensions:
+      - .rb
+      - .rbw
+      - .rake
+      - .gemspec
+      - .rbx
+      - .duby
+      - .jruby
+    comment:
+      - '#'
+  java:
+    extensions:
+      - .java
+      - .class
+      - .jar
+    comment:
+      - //
+  shell:
+    extensions:
+      - .sh
+      - .bash
+      - .ksh
+      - .csh
+      - .zsh
+      - .fish
+    comment:
+      - '#'
+  php:
+    extensions:
+      - .php
+      - .php3
+      - .php4
+      - .php5
+      - .php7
+      - .phtml
+    comment:
+      - //
+  perl:
+    extensions:
+      - .pl
+      - .pm
+      - .t
+      - .pod
+    comment:
+      - '#'
+  swift:
+    extensions:
+      - .swift
+    comment:
+      - //
+  kotlin:
+    extensions:
+      - .kt
+      - .kts
+    comment:
+      - //
+  scala:
+    extensions:
+      - .scala
+      - .sc
+    comment:
+      - //
+  haskell:
+    extensions:
+      - .hs
+      - .lhs
+    comment:
+      - --
+  r:
+    extensions:
+      - .r
+      - .rdata
+      - .rds
+      - .rdx
+    comment:
+      - '#'
+  julia:
+    extensions:
+      - .jl
+    comment:
+      - '#'
+  dart:
+    extensions:
+      - .dart
+    comment:
+      - //
+  elixir:
+    extensions:
+      - .ex
+      - .exs
+    comment:
+      - '#'
+  erlang:
+    extensions:
+      - .erl
+      - .hrl
+    comment:
+      - '%'
+  clojure:
+    extensions:
+      - .clj
+      - .cljs
+      - .cljc
+    comment:
+      - ;
+  groovy:
+    extensions:
+      - .groovy
+      - .gvy
+      - .gy
+      - .gsh
+    comment:
+      - //
+  coffeescript:
+    extensions:
+      - .coffee
+      - .litcoffee
+      - .coffee.md
+    comment:
+      - '#'
+  scss:
+    extensions:
+      - .scss
+    comment:
+      - //
+  sass:
+    extensions:
+      - .sass
+    comment:
+      - //
+  less:
+    extensions:
+      - .less
+    comment:
+      - //
+  stylus:
+    extensions:
+      - .styl
+    comment:
+      - //
+  vb_net: # Visual Basic .NET
+    extensions:
+      - .vb
+      - .vbs
+    comment:
+      - "'"
+  powershell:
+    extensions:
+      - .ps1
+      - .psm1
+      - .psd1
+    comment:
+      - '#'
+  batch: # Batch Script
+    extensions:
+      - .bat
+      - .cmd
+    comment:
+      - '::'
+  assembly: # x86 Assembly
+    extensions:
+      - .asm
+      - .s
+    comment:
+      - ;
+  vhdl: # VHSIC Hardware Description Language
+    extensions:
+      - .vhdl
+      - .vhd
+    comment:
+      - --
+  verilog:
+    extensions:
+      - .v
+      - .sv
+    comment:
+      - //
+  matlab:
+    extensions:
+      - .m
+      - .mlx
+    comment:
+      - '%'
+  fortran:
+    extensions:
+      - .f
+      - .f90
+      - .f95
+      - .f03
+      - .f08
+    comment:
+      - !
+  pascal:
+    extensions:
+      - .pas
+      - .pp
+      - .dpr
+    comment:
+      - //
+  delphi: # Object Pascal
+    extensions:
+      - .pas
+      - .dpr
+      - .dfm
+    comment:
+      - //
+  ada:
+    extensions:
+      - .adb
+      - .ads
+    comment:
+      - --
+  lisp:
+    extensions:
+      - .lisp
+      - .lsp
+      - .cl
+    comment:
+      - ;
+  scheme:
+    extensions:
+      - .scm
+      - .ss
+    comment:
+      - ;
+  prolog:
+    extensions:
+      - .pl
+      - .pro
+    comment:
+      - '%'
+  tcl:
+    extensions:
+      - .tcl
+    comment:
+      - '#'
+  perl6: # Raku
+    extensions:
+      - .p6
+      - .pm6
+      - .rakumod
+    comment:
+      - '#'
+  awk:
+    extensions:
+      - .awk
+    comment:
+      - '#'
+  sed:
+    extensions:
+      - .sed
+    comment:
+      - '#'
+  makefile:
+    extensions:
+      - .mk
+      - .mak
+      - Makefile
+    comment:
+      - '#'
+  dockerfile:
+    extensions:
+      - .dockerfile
+      - Dockerfile
+    comment:
+      - '#'
+  puppet:
+    extensions:
+      - .pp
+    comment:
+      - '#'
+  ansible:
+    extensions:
+      - .yml
+    comment:
+      - '#'
+  terraform:
+    extensions:
+      - .tf
+    comment:
+      - '#'
+  jsonnet:
+    extensions:
+      - .jsonnet
+      - .libsonnet
+    comment:
+      - //
+  cue:
+    extensions:
+      - .cue
+    comment:
+      - //
+  nim:
+    extensions:
+      - .nim
+      - .nimble
+    comment:
+      - '#'
+  crystal:
+    extensions:
+      - .cr
+    comment:
+      - '#'
+  # d:
+  #   extensions:
+  #     - .d
+  #   comment:
+  #     - //
+  vala:
+    extensions:
+      - .vala
+    comment:
+      - //
+  haxe:
+    extensions:
+      - .hx
+    comment:
+      - //
+  fantom:
+    extensions:
+      - .fan
+    comment:
+      - //
+  monkey:
+    extensions:
+      - .monkey
+    comment:
+      - "'"
+  gosu:
+    extensions:
+      - .gs
+      - .gsp
+      - .gst
+    comment:
+      - //
+  ooc:
+    extensions:
+      - .ooc
+    comment:
+      - //
+  chapel:
+    extensions:
+      - .chpl
+    comment:
+      - //
+  pawn:
+    extensions:
+      - .pwn
+      - .inc
+    comment:
+      - //
+  squirrel:
+    extensions:
+      - .nut
+    comment:
+      - //
+  janet:
+    extensions:
+      - .janet
+    comment:
+      - '#'
+  factor:
+    extensions:
+      - .factor
+    comment:
+      - !
+  red:
+    extensions:
+      - .red
+      - .reds
+    comment:
+      - ;
+  rebol:
+    extensions:
+      - .r
+      - .reb
+    comment:
+      - ;
+  forth:
+    extensions:
+      - .fs
+      - .fth
+    comment:
+      - \ 
+  mercury:
+    extensions:
+      - .moo
+    comment:
+      - '%'
+  clean:
+    extensions:
+      - .icl
+      - .dcl
+    comment:
+      - //
+  icon:
+    extensions:
+      - .icn
+    comment:
+      - '#'
+  urweb:
+    extensions:
+      - .ur
+    comment:
+      - '%'
+  pike:
+    extensions:
+      - .pike
+    comment:
+      - /*
+      - '*/'
+  oz:
+    extensions:
+      - .oz
+    comment:
+      - '%'
+  eiffel:
+    extensions:
+      - .e
+    comment:
+      - --
+  sather:
+    extensions:
+      - .sa
+    comment:
+      - --
+  nemerle:
+    extensions:
+      - .n
+    comment:
+      - //
+  cobol:
+    extensions:
+      - .cob
+      - .cbl
+    comment:
+      - "*"
+  visual_basic:
+    extensions:
+      - .bas
+      - .frm
+      - .cls
+    comment:
+      - "'"
+  actionscript:
+    extensions:
+      - .as
+    comment:
+      - //
+  coldfusion:
+    extensions:
+      - .cfm
+      - .cfc
+    comment:
+      - <!--
+      - -->
+  cfscript:
+    extensions:
+      - .cfm
+      - .cfc
+    comment:
+      - //
+  lua_server_pages: # LSP
+    extensions:
+      - .lsp
+    comment:
+      - --
+  openlaszlo:
+    extensions:
+      - .lzx
+    comment:
+      - <!--
+      - -->
+  mxml:
+    extensions:
+      - .mxml
+    comment:
+      - <!--
+      - -->
+  handlebars:
+    extensions:
+      - .hbs
+      - .handlebars
+    comment:
+      - '{{!'
+      - '}}'
+  mustache:
+    extensions:
+      - .mustache
+    comment:
+      - '{{!'
+      - '}}'
+  dustjs:
+    extensions:
+      - .dust
+    comment:
+      - '{!'
+      - '!}'
+  nunjucks:
+    extensions:
+      - .njk
+      - .nunjucks
+    comment:
+      - '{#'
+      - '#}'
+  liquid:
+    extensions:
+      - .liquid
+    comment:
+      - '{% comment %}'
+      - '{% endcomment %}'
+  twig:
+    extensions:
+      - .twig
+    comment:
+      - '{#'
+      - '#}'
+  smarty:
+    extensions:
+      - .tpl
+    comment:
+      - '{*'
+      - '*}'
+  velocity:
+    extensions:
+      - .vm
+    comment:
+      - '##'
+  freemarker:
+    extensions:
+      - .ftl
+    comment:
+      - <#--
+      - -->
+  pug: # Jade
+    extensions:
+      - .pug
+      - .jade
+    comment:
+      - //-
+  slim:
+    extensions:
+      - .slim
+    comment:
+      - /
+  haml:
+    extensions:
+      - .haml
+    comment:
+      - -#
+  erb: # Embedded Ruby
+    extensions:
+      - .erb
+    comment:
+      - <%#
+      - '%>'
+  ejs: # Embedded JavaScript
+    extensions:
+      - .ejs
+    comment:
+      - <%--
+      - --%>
+  aspx: # Active Server Pages Extended
+    extensions:
+      - .aspx
+    comment:
+      - <!--
+      - -->
+  razor:
+    extensions:
+      - .cshtml
+    comment:
+      - '@*'
+      - '*@'
+  jsp: # JavaServer Pages
+    extensions:
+      - .jsp
+    comment:
+      - <%--
+      - --%>
+  taglibs: # JavaServer Pages Tag Library Descriptor
+    extensions:
+      - .tld
+    comment:
+      - <!--
+      - -->
+  freemarker_xml: # FreeMarker XML
+    extensions:
+      - .ftlx
+    comment:
+      - <#--
+      - -->
+  velocity_xml: # Velocity XML
+    extensions:
+      - .vmx
+    comment:
+      - '##'
+  xslt: # XSL Transformations
+    extensions:
+      - .xsl
+      - .xslt
+    comment:
+      - <!--
+      - -->
+  xquery:
+    extensions:
+      - .xq
+      - .xqy
+    comment:
+      - '(:'
+      - ':)'
+  riotjs:
+    extensions:
+      - .tag
+    comment:
+      - <!--
+      - -->
+  vue:
+    extensions:
+      - .vue
+    comment:
+      - <!--
+      - -->
+  svelte:
+    extensions:
+      - .svelte
+    comment:
+      - <!--
+      - -->
+  astro:
+    extensions:
+      - .astro
+    comment:
+      - <!--
+      - -->
+  marko:
+    extensions:
+      - .marko
+    comment:
+      - <!--
+      - -->
+  ember:
+    extensions:
+      - .hbs
+    comment:
+      - //
+  flutter:
+    extensions:
+      - .dart
+    comment:
+      - //
+  xamarin:
+    extensions:
+      - .xaml
+    comment:
+      - //
+  sqlite:
+    extensions:
+      - .sqlite
+      - .sqlite3
+    comment:
+      - --
+  sql:
+    extensions:
+      - .sql
+    comment:
+  env:
+    extensions:
+      - .env
+      - .env.example
+    comment:
+      - '#'
+
+stores:
+  json:
+    extensions:
+      - .json
+    comment:
+      - //
+  yaml:
+    extensions:
+      - .yaml
+      - .yml
+    comment:
+      - '#'
+  toml:
+    extensions:
+      - .toml
+    comment:
+      - '#'
+  xml:
+    extensions:
+      - .xml
+    comment:
+      - <!--
+      - -->
+  csv:
+    extensions:
+      - .csv
+    comment:
+      - '#'
+  ini:
+    extensions:
+      - .ini
+      - .cfg
+    comment:
+      - ;
+  env:
+    extensions:
+      - .env.example
+    comment:
+      - '#'
+
+documents:
+  text:
+    extensions:
+      - .txt
+      - .log
+      - .rst
+      - .adoc
+      - .asciidoc
+      - .tex
+      - .latex
+      - .r
+      - .rst
+      - .rdoc
+      - .pod
+      - .wiki
+      - .mediawiki
+      - .creole
+      - .org
+      - .org_archive
+      - .bib
+      - .bibtex
+      - .biblatex
+      - .dtx
+      - .ins
+      - .ltx
+      - .sty
+      - .cls
+      - .diff
+      - .patch
+      - .texinfo
+      - .info
+      - .roff
+      - .man
+      - .me
+      - .ms
+      - .troff
+      - .d
+      - .dic
+      - .aff
+      - .hunspell
+      - .aspell
+      - .dict
+      - .texi
+      - .texinfo
+      - .sgml
+      - .sgm
+      - .troff
+      - .nroff
+      - .man
+      - .1
+      - .2
+      - .3
+      - .4
+      - .5
+      - .6
+      - .7
+      - .8
+      - .9
+    comment:
+      - '#'
+  markdown:
+    extensions:
+      - .md
+      - .markdown
+      - .mkd
+      - .mkdn
+      - .mdwn
+      - .mdown
+      - .mdtxt
+      - .mdtext
+      - .rmd
+      - .text
+    comment:
+      - <!--
+      - -->
+
+# Files to exclude must be listed under their language or the generic key 'locc'
+# Folders to exclude must be listed under the generic key 'locc' and end with a forward slash (/), i.e: "node_modules/"
+# The important parts here are the file name and the format in which it's defined.
+excludes:
+  # The 'locc' key contains common global exclusions including folders defined as simple exclusion 
+  locc:
+    # If a filename is defined as a list item (with the format '- filename.format'), the default behavior is to exclude the file every time.
+    # locc specific files
+    - .locc.yaml
+    - code.prompt.md
+    # Rust
+    - Cargo.toml
+    # Elixir
+    - mix.exs
+    # Configuration and Metadata
+    - config.js
+    - config.json
+    - config.yml
+    - config.yaml
+    - settings.py
+    - app.config
+    - web.config
+    - package.json
+    - package-lock.json
+    - composer.json
+    - composer.lock
+    - requirements.txt
+    - pom.xml
+    - build.gradle
+    - docker-compose.yml
+    # Frontend Specific Exclusions
+    - vite.config.ts
+    - index.html
+    - postcss.config.js
+    - tailwind.config.js
+    - vite-env.d.ts
+    - .eslintrc.cjs
+    - .eslintrc.js
+    - .eslintrc.json
+    - .eslintrc.yaml
+    - .eslintrc.yml
+    - webpack.config.js
+    - gulpfile.js
+    - gruntfile.js
+    - .stylelintrc
+    - tsconfig.json
+    - package-lock.json
+    # Other
+    - README.md
+    - .travis.yml
+    - .appveyor.yml
+    - azure-pipelines.yml
+    # General Build/Distribution Folders
+    - dist/
+    - build/
+    - target/
+    - out/
+    - bin/
+    - release/
+    - lib/
+    - obj/
+    - debug/
+    - .next/
+    - public/
+    # Package Management and Dependencies
+    - node_modules/
+    - vendor/
+    - .bundle/
+    - bower_components/
+    - packages/
+    - .venv/
+    - env/
+    - .tox/
+    - __pycache__/
+    # Version Control
+    - .git/
+    - .svn/
+    - .hg/
+    # IDE/Editor Configurations
+    - .vscode/
+    - .idea/
+    - .settings/
+    # Documentation and Examples
+    - docs/
+    - examples/
+    - sample/
+    - test/
+    - tests/
+    - spec/
+    - specs/
+    # Data and Databases
+    - db/
+    - database/
+    - data/
+    - datasets/
+    - migrations/
+    - seeds/
+    # Logs and Temporary Files
+    - logs/
+    - log/
+    - tmp/
+    - temp/
+    - cache/
+    # Mobile Development
+    - android/
+    - ios/
+    - platforms/
+    - plugins/
+    - www/
+    # Other
+    - .circleci/
+    - .github/
+  javascript:
+    # If a filename is defined as a key (with the format 'filename.format:'), it must contain either an 'exclude' or 'include' wordlist key.
+    index.js:
+      # This wordlist contains a list of items defining the phrases that trigger an exclude of the file.
+       - AUTOMATICALLY GENERATED
+  typescript:
+    index.ts:
+       - AUTOMATICALLY GENERATED
+  shell:
+    - build.sh
+    - deploy.sh
+    - update.sh
+
+max_file_size: 65536  # 64KB in bytes
